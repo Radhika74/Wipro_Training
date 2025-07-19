@@ -1,0 +1,1 @@
+# Write a program to accept 10 numbers through command line arguments and calculate the sum of prime numbers among them

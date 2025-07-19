@@ -1,0 +1,1 @@
+# Write a function that accepts a string and prints the number of upper case letters and lower case letters in it.

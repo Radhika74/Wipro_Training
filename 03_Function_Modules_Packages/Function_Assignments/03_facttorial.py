@@ -1,0 +1,1 @@
+# Write a function to calculate and return the factorial of a number (a non-negative integer).
