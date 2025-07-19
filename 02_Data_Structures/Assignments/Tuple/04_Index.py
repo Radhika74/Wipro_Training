@@ -1,0 +1,1 @@
+# Write a program to find the index of an item in a tuple.

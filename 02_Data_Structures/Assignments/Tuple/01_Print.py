@@ -1,0 +1,1 @@
+# Write a program to print the 4th element from first and 4th element from last in a tuple.

@@ -1,0 +1,1 @@
+# Write a program to remove the item from a specified index in a list.

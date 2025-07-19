@@ -1,0 +1,1 @@
+# Write a program to remove a given item form the set

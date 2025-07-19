@@ -1,0 +1,1 @@
+# Write a program to remove the first occurrence of a specified element from a list.
