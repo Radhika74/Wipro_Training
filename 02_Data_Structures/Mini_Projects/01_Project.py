@@ -8,3 +8,25 @@
 # David: Plays the piano.
 # Jason: Can fly an airplane.
 # Jill: Can hula dance.
+
+
+# Take input from user
+
+people = {
+    "Jeff": "Is afraid of Dogs.",
+    "David": "Plays the piano.",
+    "Jason": "Can fly an airplane."
+}
+
+# Display original facts
+print("Original facts:")
+for person, fact in people.items():
+    print(f"{person}: {fact}")
+
+# Change a fact
+people["Jeff"] = "Is afraid of heights."
+people["Jill"] = "Can hula dance."
+
+print("\nUpdated facts:")
+for person, fact in people.items():
+    print(f"{person}: {fact}")
