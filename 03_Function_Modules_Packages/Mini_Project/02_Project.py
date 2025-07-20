@@ -14,3 +14,13 @@ Frequency of letters: b-2, o-1
 Sample Input 2: marcel bentok tanaka
 Sample Output 2: No it is not a palindrome.
 '''
+
+import isPalindrome_module as isPal
+import count_module as count
+import frequency_module as freq
+
+name = input("Enter a name: ")
+
+print(isPal.ispalindrome(name))
+print("No of vowels:", count.count_the_vowels(name))
+print("Frequency of letters:", freq.frequency_of_letters(name))

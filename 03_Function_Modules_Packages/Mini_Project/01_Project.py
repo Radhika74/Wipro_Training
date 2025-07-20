@@ -4,3 +4,13 @@
 # Sample Output 1: black-green-red-white-yellow
 # Sample Input 2: PINK-BLUE-TAN-PURPLE
 # Sample Output 2: BLUE-PINK-PURPLE-TAN
+
+def sort_colors(colors):
+    colors = colors.split("-")
+    colors.sort()
+    return "-".join(colors)
+
+#take user input
+colors = input("Enter colors separated by hyphen: ")
+print(sort_colors(colors))
+
