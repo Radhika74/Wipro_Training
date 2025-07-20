@@ -1,0 +1,4 @@
+sample_content = Hello, this is a sample text file.
+It contains multiple lines of text.
+Python is great for reading files!
+End of file. Hii
