@@ -9,4 +9,4 @@ def file_content():
         print(f"Error: File '{file_name}' not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
-file_content()
+print(file_content())
