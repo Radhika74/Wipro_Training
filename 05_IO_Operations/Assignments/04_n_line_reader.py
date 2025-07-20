@@ -1,0 +1,1 @@
+# Write a program to read first n lines from a txt file. Get n as user input.

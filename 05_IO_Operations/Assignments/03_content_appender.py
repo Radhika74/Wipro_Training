@@ -1,0 +1,1 @@
+# Write a program to accept input from user and append it to a txt file.

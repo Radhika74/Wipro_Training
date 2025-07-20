@@ -1,0 +1,1 @@
+# Write a program to read the entire content from a txt file and display it to the user.

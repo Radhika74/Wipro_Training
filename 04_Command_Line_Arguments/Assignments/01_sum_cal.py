@@ -1,0 +1,1 @@
+# Write a program to accept two numbers as command line arguments and display their sum.
