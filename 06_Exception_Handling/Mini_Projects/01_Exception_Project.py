@@ -45,7 +45,7 @@ Soup Free
 Discount 80
 
 Sample output 2:
-Enter the file name: Purchase-1
+Enter the file name: Purchase-2
 No of items purchased: 5
 No of free items: 2
 Amount to pay: 485
@@ -54,3 +54,46 @@ Final amount paid: 405
 
 '''
 
+def analyze_purchase(file_name):
+    try:
+        with open(file_name + '.txt', 'r') as file:
+            lines = file.readlines()
+
+        purchased = 0
+        free = 0
+        total = 0
+        discount = 0
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split()
+            if len(parts) == 2:
+                item, value = parts
+                if value.lower() == "free":
+                    free += 1
+                elif item.lower() == "discount":
+                    discount = int(value)
+                else:
+                    total += int(value)
+                    purchased += 1
+
+        final = total - discount
+
+        print("No of items purchased:", purchased)
+        print("No of free items:", free)
+        print("Amount to pay:", total)
+        print("Discount given:", discount)
+        print("Final amount paid:", final)
+
+    except FileNotFoundError:
+        print("File not found.")
+    except ValueError:
+        print("File contains invalid data.")
+    except Exception as e:
+        print("Error:", e)
+
+
+file_name = input("Enter the file name: ")
+analyze_purchase(file_name)
