@@ -3,3 +3,8 @@
 # Sample Input: Hi Alex WelcomeAlex Bye Alex.
 # Sample Output: 3
 # Explanation: Alex name appears 3 times in the string. Hi Alex WelcomeAlex Bye Alex.
+
+text = input("Enter a text: ")
+name = input("Enter the name to search: ")
+count = text.count(name)
+print(count)

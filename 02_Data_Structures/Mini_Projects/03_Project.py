@@ -11,3 +11,17 @@
 # Enter a name: Malika
 # Average percentage mark: 56
 # Explanation: Marks for Malika are [52, 56, 60] whose average is (52 + 56 + 60) / 3 => 56
+
+students = {}
+n = int(input("Enter the number of students: "))
+for i in range(n):
+    name = input("Enter student name: ")
+    marks = list(map(float, input("Enter marks separated by space: ").split()))
+    students[name] = marks
+
+name = input("Enter name: ")
+if name in students:
+    average = sum(students[name]) / len(students[name])
+    print("Average percentage mark: ", int(average))
+else:
+    print("Student not found.")
