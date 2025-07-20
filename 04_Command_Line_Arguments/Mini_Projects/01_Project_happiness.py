@@ -22,3 +22,31 @@ You gain 1 unit of happiness for numbers 77, 2 and 34 which are in string 1. You
 You lose 1 unit of happiness for number 3 which is in string 2. Your total happiness is 2 now.
 15 and 13 are not present in either of the strings, so your happiness does not change.
 Final happiness is 2.'''
+
+import sys
+
+def calculate_happiness(like_str, dislike_str, input_str):
+    like = set(map(int, like_str.split('-')))
+    dislike = set(map(int, dislike_str.split('-')))
+    input_numbers = list(map(int, input_str.split('-')))
+
+    happiness = 0
+    for num in input_numbers:
+        if num in like:
+            happiness += 1
+        elif num in dislike:
+            happiness -= 1
+
+    return happiness
+
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python happiness_calculator.py <like_string> <dislike_string> <input_string>")
+        sys.exit(1)
+
+    like_str = sys.argv[1]
+    dislike_str = sys.argv[2]
+    input_str = sys.argv[3]
+
+    result = calculate_happiness(like_str, dislike_str, input_str)
+    print(result)
