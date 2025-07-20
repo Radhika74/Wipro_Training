@@ -32,3 +32,30 @@ Meeting time: 8 PM
 Meeting place: Apollo Street
 
 Explanation: Number of lines is 20 and converting it to 12 hour format we get 8 PM. The word Apollo appears for the maximum of 25 times.'''
+
+import re
+from collections import Counter
+
+def get_meeting_details(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    
+    line_count = len(lines)
+    
+    if line_count <= 12:
+        time = f"{line_count} AM"
+    else:
+        hour = line_count % 12
+        hour = 12 if hour == 0 else hour
+        time = f"{hour} PM"
+
+    text = ' '.join(lines).lower()
+    words = re.findall(r'\b\w+\b', text)
+    word_counts = Counter(words)
+    place = word_counts.most_common(1)[0][0].capitalize() + " Street"
+
+    print("Meeting time:", time)
+    print("Meeting place:", place)
+
+file_path = 'message.txt'
+get_meeting_details(file_path)
